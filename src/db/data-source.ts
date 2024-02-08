@@ -16,7 +16,7 @@ function prepareDB (db: BetterSQLDB3) {
     console.log('\n\nPreparing the DB...')
     // turned out could use "key" for encryption as well
     db.pragma(`key = '${encryptionKey}'`);
-    // should catch "wrong key" error here if the key is wrong if we set WAL manually
+    // should catch "wrong key" error here if we set WAL manually
     // db.pragma('journal_mode = WAL'); // where are sqlite-wal/shm files?
 }
 
@@ -26,7 +26,7 @@ export const AppDataSource = new DataSource({
     driver: require('better-sqlite3-multiple-ciphers'), // 🔑 to use encryption!
     synchronize: true,  // auto-reflect for prototyping
     logging: true,
-    verbose: console.log,
+    verbose: console.log, // -vvvvv verbose =)
     entities: [DbConfig],
     migrations: [],
     subscribers: [],

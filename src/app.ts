@@ -1,5 +1,5 @@
 import { AppDataSource } from "./db/data-source";
-import { DbConfig } from "./db/entities//DbConfig";
+import { DbConfig } from "./db/entities/DbConfig";
 
 
 async function demo() {
