@@ -16,6 +16,11 @@
     "paths": {
       "*": ["node_modules/*", "src/types/*"],
     },
+    // should enable decorators for TypeORM
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    // strictPropertyInitialization false is neat for static props etc
+    "strictPropertyInitialization": false // for TypeORM props | use "prop!"
   },
   "include": ["src/**/*.ts", "src/**/*.js"],
   "exclude": ["node_modules", "src/**/*.test.ts"],

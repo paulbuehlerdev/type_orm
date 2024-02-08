@@ -2,8 +2,6 @@
   "name": "@beshu-tech/authfish_type_orm",
   "version": "1.0.16",
   "description": "Trying TypeORM with BSL3MC",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc --noEmitOnError",
     "start": "npx nodemon src/app.ts",
