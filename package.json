@@ -7,7 +7,13 @@
     "start": "npx nodemon src/app.ts",
     "start:dist": "node dist/app.js",
     "test": "jest",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migration:create": "npm run typeorm migration:create ./src/migrations",
+    "migration:generate": "npm run typeorm migration:generate -- -d ./src/db/data-source.ts --pretty",
+    "migration:show": "npm run typeorm migration:show -- -d ./src/db/data-source.ts",
+    "migration:run": "npm run typeorm migration:run -- -d  ./src/db/data-source.ts",
+    "migration:revert": "npm run typeorm migration:revert -- -d ./src/db/data-source.ts"
   },
   "dependencies": {
     "@types/node": "^20.11.16",
