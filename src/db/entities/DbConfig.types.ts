@@ -15,11 +15,11 @@ export const OptionsSchema = z.discriminatedUnion("type", [
     }),
     code: z.string()
   })
-]);
+]).nullable();
 
 export type Options = z.infer<typeof OptionsSchema>;
 
-export const TagSchema = z.array(z.discriminatedUnion("type", [
+export const TagsSchema = z.array(z.discriminatedUnion("type", [
   z.object({
     type: z.literal("normal"),
     name: z.string()
@@ -31,4 +31,4 @@ export const TagSchema = z.array(z.discriminatedUnion("type", [
   }),
 ]));
 
-export type Tag = z.infer<typeof TagSchema>;
+export type Tags = z.infer<typeof TagsSchema>;

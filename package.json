@@ -9,7 +9,7 @@
     "test": "jest",
     "test:ci": "jest --ci",
     "typeorm": "typeorm-ts-node-commonjs",
-    "migration:create": "npm run typeorm migration:create ./src/migrations",
+    "migration:create": "npm run typeorm migration:create",
     "migration:generate": "npm run typeorm migration:generate -- -d ./src/db/data-source.ts --pretty",
     "migration:show": "npm run typeorm migration:show -- -d ./src/db/data-source.ts",
     "migration:run": "npm run typeorm migration:run -- -d  ./src/db/data-source.ts",

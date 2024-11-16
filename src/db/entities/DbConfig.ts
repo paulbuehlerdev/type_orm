@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn } from 'typeorm';
-import { Options, Tag } from "./DbConfig.types";
+import { Options, Tags } from "./DbConfig.types";
 
 
 @Entity()
@@ -31,5 +31,5 @@ export class DbConfig {
   options: Options;
 
   @Column({ type: "json", default: '[]' })
-  tags: Tag[];
+  tags: Tags;
 }
